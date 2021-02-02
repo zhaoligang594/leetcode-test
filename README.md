@@ -8,7 +8,7 @@
 
 #### 2.2 [基本工具](/tools/tools.md)
 
-#### 2.3 常用的算法
+#### 2.3 [常用的算法](/base-algorithm)
 
 #### 2.4 [二十三种设计模式](/design-pattern/desigin-pattern.md)
 
