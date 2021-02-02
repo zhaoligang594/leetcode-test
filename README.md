@@ -19,3 +19,5 @@
 北邮在读研究生，专注于Java后端开发，最近也在学习python3。希望大家一起努力啊！！
 
 ![qrcode_for_gh_8742820aee98_344](picture/qrcode_for_gh_8742820aee98_344.jpg)
+
+> 上面是我个人的公众号，欢迎关注！！！！
