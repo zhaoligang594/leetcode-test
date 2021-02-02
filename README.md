@@ -10,6 +10,10 @@
 
 #### 2.3 常用的算法
 
+#### 2.4 [二十三种设计模式](/design-pattern/desigin-pattern.md)
+
+#### 2.4 [六大设计原则](/design-pattern/design-rule.md)
+
 ### 3. 个人简介
 
 北邮在读研究生，专注于Java后端开发，最近也在学习python3。希望大家一起努力啊！！
