@@ -172,4 +172,154 @@ public abstract class TreeUtils {
 > 上面分别介绍了树的深度优先遍历的3种遍历的方式，整体上说，也就是，什么时候访问节点信息，结果导致了 是 先序、中序或者是后序的遍历。
 
 * 广度优先遍历
+
+> 广度优先遍历也称为水平遍历，也就是按照从上到下、从左到右的依次访问遍历。在遍历期间，我们要使用队列这个数据结构。帮助我们保存前面所遍历的信息。
+
+
+
+```java
+    /**
+     * 广度优先 水平遍历
+     *
+     * @param root 跟节点
+     */
+    public static void lfs(TreeNode root) {
+        // 创建队列对象
+        Deque<TreeNode> queue = new ArrayDeque<>();
+        if (null != root) {
+            queue.addLast(root);
+            while (!queue.isEmpty()) {
+                TreeNode node = queue.pollFirst();
+                visit(node);
+                if (null != node.left) queue.addLast(node.left);
+                if (null != node.right) queue.addLast(node.right);
+            }
+        }
+    }
+```
+
+
+
 * 迭代遍历
+
+> 在我们深度遍历的过程中，我们使用递归实现遍历的算法。递归的本质是 操作系统使用堆栈来实现上下文信息的保存，所以要实现迭代的算法，我们需要使用栈的数据结构。
+
+```java 
+    // 先序遍历的操作
+    public static void proOrderUnRecur(TreeNode head) {
+        System.out.println("pro-order");
+        if (null != head) {
+            Deque<TreeNode> stack = new ArrayDeque<TreeNode>();
+            stack.addLast(head);
+            while (!stack.isEmpty()) {
+                head = stack.pollLast();
+                System.out.print(head.val + " ");
+                if (head.right != null) stack.addLast(head.right);
+                if (head.left != null) stack.addLast(head.left);
+            }
+        }
+        System.out.println();
+    }
+```
+
+
+
+```java
+    // 中序遍历
+    public static void inOrderUnRecur(TreeNode head) {
+        System.out.println("in-order");
+        if (null != head) {
+            Deque<TreeNode> stack = new ArrayDeque<TreeNode>();
+            while (!stack.isEmpty() || head != null) {
+                if (null != head) {
+                    stack.addLast(head);
+                    head = head.left;
+                } else {
+                    head = stack.pollLast();
+                    System.out.print(head.val + " ");
+                    head = head.right;
+                }
+            }
+        }
+        System.out.println();
+    }
+```
+
+
+
+```java 
+    // 后序遍历
+    public static void posOrderUnRecur(TreeNode head) {
+        System.out.println("pos-order");
+        if (null != head) {
+            Deque<TreeNode> stack1 = new ArrayDeque<TreeNode>();
+            Deque<TreeNode> stack2 = new ArrayDeque<TreeNode>();
+            stack1.addLast(head);
+            while (!stack1.isEmpty()) {
+                head = stack1.pollLast();
+                stack2.addLast(head);
+                if (head.left != null) stack1.addLast(head.left);
+                if (head.right != null) stack1.addLast(head.right);
+
+            }
+            while (!stack2.isEmpty()) {
+                System.out.print(stack2.pollLast().val + " ");
+            }
+        }
+        System.out.println();
+    }
+```
+
+> 后续遍历，使用了2个栈来进行实现的。因为 先序遍历是NLR  后续遍历是 LRN 那么就可以看成 NRL 也就是 特殊的先序遍历 NRL 也就是 在遍历的过程中 先访问 右节点 就可以满足我们的遍历的要求。
+
+#### 5. 二叉树的序列化与反序列化
+
+> 序列话与反序列化在平时的工作中是经常用到的，因为可以临时的帮助我们存储某些结果，防止我们重新的计算。同时也是克服两个服务端不同的实现的预言进行通信的桥梁。
+
+
+
+```java
+    /**
+     * 序列化的操作
+     *
+     * @param root 二叉树的根结点
+     * @return
+     */
+    public static String serialTree(TreeNode root) {
+        if (null == root) return "#_";
+        return root.val + "_" + serialTree(root.left) + serialTree(root.right);
+    }
+```
+
+
+
+```java
+    /**
+     * 反序列化树结构
+     *
+     * @param data
+     * @return
+     */
+    public static TreeNode reConTree(String data) {
+        if (null == data || "".equals(data)) return null;
+        String[] split = data.split("_");
+        Deque<String> queue = new ArrayDeque<>();
+        for (String str : split) {
+            queue.addLast(str);
+        }
+        return reConTree(queue);
+    }
+
+    private static TreeNode reConTree(Deque<String> queue) {
+        TreeNode res = null;
+        if (!queue.isEmpty()) {
+            String s = queue.pollFirst();
+            if ("#".equals(s)) return null;
+            res = new TreeNode(Integer.valueOf(s));
+            res.left = reConTree(queue);
+            res.right = reConTree(queue);
+        }
+        return res;
+    }
+```
+
