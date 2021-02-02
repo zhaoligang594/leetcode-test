@@ -40,7 +40,7 @@ public class TreeNode {
 #### 2. 头插法创建链表
 
 ```java
-	/**
+/**
      * 头插法创建链表
      *
      * @param array 创建的链表信息 [1,2,3,4,5]
@@ -48,7 +48,7 @@ public class TreeNode {
      */
     public static ListNode getListByInsertHead(int[] array) {
         ListNode head = null;
-        for (int i = 1; i < array.length; i++) {
+        for (int i =array.length-1; i >=0; i--) {
             ListNode node = new ListNode(array[i]);
             node.next = head;
             head = node;
