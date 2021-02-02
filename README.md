@@ -24,7 +24,7 @@
 
 ### 4 . 特别说明：
 
-本文档都是使用markdown书写的，有一些共识无法正确的表示，推荐安装chrom浏览器的插件：
+本文档都是使用markdown书写的，有一些公式无法正确的表示，推荐安装chrom浏览器的插件：
 
 https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima/related
 

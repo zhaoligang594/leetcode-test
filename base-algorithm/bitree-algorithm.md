@@ -96,3 +96,80 @@ public abstract class TreeUtils {
 }
 ```
 
+#### 4. 二叉树的遍历
+
+> 二叉树的遍历分为 深度优先遍历 和 广度优先遍历。同时也分为 递归遍历 以及 迭代遍历。
+
+访问节点函数：
+
+```java
+    // 访问节点
+    private static void visit(TreeNode node) {
+        // to do something
+        System.out.println(node.val);
+    }
+```
+
+
+
+* 深度优先遍历
+
+```java
+    /**
+     * 深度优先 先序遍历
+     *
+     * @param root 根节点
+     */
+    public static void preOrderDfs(TreeNode root) {
+        if (null != root) {
+            // 访问节点信息 处理相关操作
+            visit(root);
+            preOrderDfs(root.left);
+            preOrderDfs(root.right);
+        }
+    }
+    
+```
+
+
+
+```java
+    /**
+     * 深度优先 中序遍历
+     *
+     * @param root 根节点
+     */
+    public static void inOrderDfs(TreeNode root) {
+        if (null != root) {
+            inOrderDfs(root.left);
+            // 访问节点信息 处理相关操作
+            visit(root);
+            inOrderDfs(root.right);
+        }
+    }
+```
+
+
+
+```java
+    /**
+     * 深度优先 后序遍历
+     *
+     * @param root 根节点
+     */
+    public static void postOrderDfs(TreeNode root) {
+        if (null != root) {
+            postOrderDfs(root.left);
+            postOrderDfs(root.right);
+            // 访问节点信息 处理相关操作
+            visit(root);
+        }
+    }
+```
+
+
+
+> 上面分别介绍了树的深度优先遍历的3种遍历的方式，整体上说，也就是，什么时候访问节点信息，结果导致了 是 先序、中序或者是后序的遍历。
+
+* 广度优先遍历
+* 迭代遍历
