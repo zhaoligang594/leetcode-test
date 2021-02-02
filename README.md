@@ -4,5 +4,5 @@
 
 ### 2. 目录
 
-#### 2.1 [每日一题](/blob/master/daily/daily-issue.md)
+#### 2.1 [每日一题](/daily/daily-issue.md)
 
