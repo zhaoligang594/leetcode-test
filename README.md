@@ -21,3 +21,12 @@
 ![qrcode_for_gh_8742820aee98_344](picture/qrcode_for_gh_8742820aee98_344.jpg)
 
 > 上面是我个人的公众号，欢迎关注！！！！
+
+### 4 . 特别说明：
+
+本文档都是使用markdown书写的，有一些共识无法正确的表示，推荐安装chrom浏览器的插件：
+
+https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima/related
+
+
+
