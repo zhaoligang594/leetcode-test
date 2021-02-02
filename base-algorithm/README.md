@@ -2,11 +2,11 @@
 
 > 基础算法就是平时我们学习数据结构里面的内容，设计了数据结构一些基本操作以及相关的算法的实现以及解析。
 
-#### 1. [排序算法](base-algorithm/sort-algorithm.md)
+#### 1. [排序算法](sort-algorithm.md)
 
 #### 2. 查找算法
 
-#### 3. [二叉树相关算法](base-algorithm/bitree-algorithm.md)
+#### 3. [二叉树相关算法](bitree-algorithm.md)
 
 #### 4. D算法（狄杰斯特拉算法）
 
