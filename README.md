@@ -18,6 +18,10 @@
 
 #### 2.5 [经典例题](/classic-example/README.md)
 
+#### 2.6 [leetcode刷题](/leetcode-issue/README.md)
+
+#### 2.7 [后端开发面试](/)
+
 ### 3. 个人简介
 
 北邮在读研究生，专注于Java后端开发，最近也在学习python3。希望大家一起努力啊！！
