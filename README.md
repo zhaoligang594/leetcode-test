@@ -8,13 +8,13 @@
 
 #### 2.2 [基本工具](/tools/tools.md)
 
-#### 2.3 [常用的算法](/base-algorithm)
+#### 2.3 [常用的算法](/base-algorithm/README.md)
 
 #### 2.4 [二十三种设计模式](/design-pattern/desigin-pattern.md)
 
 #### 2.4 [六大设计原则](/design-pattern/design-rule.md)
 
-#### 2.5 [经典例题](/classic-example)
+#### 2.5 [经典例题](/classic-example/README.md)
 
 ### 3. 个人简介
 
