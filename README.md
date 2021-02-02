@@ -2,6 +2,8 @@
 
 这个项目是记录每天刷题的，记录常用的题目以及解析等信息
 
+[适合观看地址](https://zhaoligang594.github.io/leetcode-test)
+
 ### 2. 目录
 
 #### 2.1 [每日一题](/daily/daily-issue.md)
