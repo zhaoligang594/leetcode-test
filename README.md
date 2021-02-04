@@ -20,7 +20,7 @@
 
 #### 2.6 [leetcode刷题](/leetcode-issue/README.md)
 
-#### 2.7 [后端开发面试](/)
+#### 2.7 [后端开发面试](/back-front)
 
 ### 3. 个人简介
 
