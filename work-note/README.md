@@ -45,3 +45,36 @@
 nohup java  -server -Xms2G -Xmx4G -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=path  -jar  XX.jar &
 ```
 
+#### 2. linux 创建软连接 ln -s 命令
+
+这是linux中一个非常重要命令，请大家一定要熟悉。它的功能是为某一个文件在另外一个位置建立一个同不的链接，这个命令最常用的参数是-s,具体用法是：ln -s 源文件 目标文件：
+
+```shell
+不论是硬连结或软链结都不会将原本的档案复制一份，只会占用非常少量的磁碟空间。
+　　-f : 链结时先将与 dist 同档名的档案删除
+　　-d : 允许系统管理者硬链结自己的目录
+　　-i : 在删除与 dist 同档名的档案时先进行询问
+　　-n : 在进行软连结时，将 dist 视为一般的档案
+　　-s : 进行软链结(symbolic link)
+　　-v : 在连结之前显示其档名
+　　-b : 将在链结时会被覆写或删除的档案进行备份
+　　-S SUFFIX : 将备份的档案都加上 SUFFIX 的字尾
+　　-V METHOD : 指定备份的方式
+```
+
+>  如果要删除软连接，直接删除刚刚新建的目标文件就好了。
+
+#### 3. 配置 maven 的基本操作
+
+> 平时开发的过程中，我们基本上管理我们的项目一般都是使用的是maven来进行管理，这个时候，maven 的作用就会凸显出来。
+
+为了防止内存出现不足的问题，这时候要修改maven的具体的参数：
+
+```shell
+test -r ~/.bash_profile && echo 'export MAVEN_OPTS="$MAVEN_OPTS -Xmx4g"' >>~/.bash_profile
+test -r ~/.profile && echo 'export MAVEN_OPTS="$MAVEN_OPTS -Xmx4g"' >>~/.profile
+test -r ~/.zshrc && echo 'export MAVEN_OPTS="$MAVEN_OPTS -Xmx4g"' >>~/.zshrc
+```
+
+经历过上面配置的参数，这样我们编译我们的软件的时候，就不会出现奇奇怪怪的问题了。
+
